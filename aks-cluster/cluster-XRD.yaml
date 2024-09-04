@@ -1,0 +1,63 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xclusters.compositions.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+spec:
+  group: compositions.io
+  names:
+    kind: XCluster
+    plural: xclusters
+  claimNames:
+    kind: AKSCluster
+    plural: aksclusters
+  versions:
+    - name: v1alpha1
+      served: true
+      referenceable: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                providerConfigRef:              # Adding the providerConfigRef field
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                parameters:
+                  type: object
+                  properties:
+                    clusterName:
+                      type: string
+                    region:
+                      type: string
+                    resourceGroupName:
+                      type: string
+                    kubernetesVersion:
+                      type: string
+                    dnsPrefix:
+                      type: string
+                    agentPoolProfiles:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          nodeCount:
+                            type: integer
+                          vmSize:
+                            type: string
+                compositionRef:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      enum:
+                        - aks-cluster-nodepool
+         
