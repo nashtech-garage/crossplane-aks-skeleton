@@ -42,17 +42,6 @@ spec:
                       type: string
                     dnsPrefix:
                       type: string
-                    agentPoolProfiles:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          name:
-                            type: string
-                          nodeCount:
-                            type: integer
-                          vmSize:
-                            type: string
                 compositionRef:
                   type: object
                   properties:

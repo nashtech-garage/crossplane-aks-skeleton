@@ -13,7 +13,6 @@ spec:
     region: ${{ values.region }}
     resourceGroupName: ${{ values.resourceGroupName }}
     kubernetesVersion: ${{ values.kubernetesVersion }}
-    dnsPrefix: ${{ values.dnsPrefix }}
-    agentPoolProfiles: ${{ values.agentPoolProfiles }}
+    dnsPrefix: ${{ values.dnsPrefix }}    
   compositionRef:
     name: aks-cluster-nodepool
