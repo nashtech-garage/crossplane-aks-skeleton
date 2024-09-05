@@ -16,6 +16,7 @@ spec:
         vnetSubnetIdRef:
           name: sub-dev
     dnsPrefix: ${{ values.dnsPrefix }}
+    kubernetesVersion: ${{ values.kubernetesVersion }}
     identity:
       - type: SystemAssigned
     location: ${{ values.region }}
