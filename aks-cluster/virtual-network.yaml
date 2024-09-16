@@ -3,7 +3,7 @@ kind: VirtualNetwork
 metadata:
   name: vn-dev
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
@@ -14,3 +14,6 @@ spec:
     location: ${{ values.region }}
     addressSpace:
       - 10.2.0.0/16
+  writeConnectionSecretToRef:
+    name: ${{ values.clusterName }}-azure-connection-secret
+    namespace: upbound-system

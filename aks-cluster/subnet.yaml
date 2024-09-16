@@ -3,7 +3,7 @@ kind: Subnet
 metadata:
   name: sub-dev
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "2"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
@@ -15,3 +15,6 @@ spec:
       name: ${{ values.resourceGroupName }}
     virtualNetworkNameRef:
       name: vn-dev
+  writeConnectionSecretToRef:
+    name: ${{ values.clusterName }}-azure-connection-secret
+    namespace: upbound-system

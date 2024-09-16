@@ -10,6 +10,3 @@ spec:
   lifecycle: development
   system: back-stack
   owner: user:le.caothihoang
-  links:
-    - url: https://console.cloud.google.com/kubernetes/clusters/details/${{ values.region }}/${{ values.clusterName }}
-      title: GKE Console
