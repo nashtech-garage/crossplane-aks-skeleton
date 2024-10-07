@@ -4,4 +4,4 @@ resources:
   - azure-provider.yaml
   - azure-provider-config.yaml
   - provider-azure-network.yaml
-  - provider-azure-containerservice.yam
+  - provider-azure-containerservice.yaml
