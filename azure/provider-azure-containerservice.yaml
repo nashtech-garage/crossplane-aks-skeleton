@@ -4,6 +4,5 @@ metadata:
   name: provider-azure-containerservice
   annotations:
     argocd.argoproj.io/sync-wave: "3"
-    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
-  package: xpkg.upbound.io/upbound/provider-azure-containerservice:v1.5.0
+  package: xpkg.upbound.io/upbound/provider-azure-containerservice:v1.7.0

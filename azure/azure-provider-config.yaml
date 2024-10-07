@@ -3,7 +3,6 @@ metadata:
   name: azure-provider-config
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 kind: ProviderConfig
 spec:
   credentials:
