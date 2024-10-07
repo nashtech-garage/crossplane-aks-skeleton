@@ -1,7 +1,7 @@
 apiVersion: network.azure.upbound.io/v1beta1
 kind: Subnet
 metadata:
-  name: sub-dev
+  name: sub-${{ values.clusterName }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
@@ -14,7 +14,7 @@ spec:
     resourceGroupNameRef:
       name: ${{ values.resourceGroupName }}
     virtualNetworkNameRef:
-      name: vn-dev
+      name: vn-${{ values.clusterName }}
   writeConnectionSecretToRef:
     name: ${{ values.clusterName }}-azure-connection-secret
     namespace: upbound-system

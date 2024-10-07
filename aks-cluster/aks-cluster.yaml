@@ -1,7 +1,7 @@
 apiVersion: containerservice.azure.upbound.io/v1beta1
 kind: KubernetesCluster
 metadata:
-  name: aks-dev
+  name: ${{ values.clusterName }}
   annotations:
     argocd.argoproj.io/sync-wave: "3"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
@@ -14,7 +14,7 @@ spec:
         nodeCount: 1
         vmSize: Standard_D2_v2
         vnetSubnetIdRef:
-          name: sub-dev
+          name: sub-${{ values.clusterName }}
     dnsPrefix: ${{ values.dnsPrefix }}
     kubernetesVersion: ${{ values.kubernetesVersion }}
     identity:
