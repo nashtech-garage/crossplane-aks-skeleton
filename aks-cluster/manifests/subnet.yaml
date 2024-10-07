@@ -16,6 +16,3 @@ spec:
       name: ${{ values.resourceGroupName }}
     virtualNetworkNameRef:
       name: vn-${{ values.clusterName }}
-  writeConnectionSecretToRef:
-    name: ${{ values.clusterName }}-azure-connection-secret
-    namespace: upbound-system

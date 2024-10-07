@@ -14,6 +14,3 @@ spec:
     location: ${{ values.region }}
     addressSpace:
       - 10.2.0.0/16
-  writeConnectionSecretToRef:
-    name: ${{ values.clusterName }}-azure-connection-secret
-    namespace: upbound-system

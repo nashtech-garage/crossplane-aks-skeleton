@@ -23,6 +23,3 @@ spec:
     location: ${{ values.region }}
     resourceGroupNameRef:
       name: ${{ values.resourceGroupName }}
-  writeConnectionSecretToRef:
-    name: ${{ values.clusterName }}-azure-connection-secret
-    namespace: upbound-system

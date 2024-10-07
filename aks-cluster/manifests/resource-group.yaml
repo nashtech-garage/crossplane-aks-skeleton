@@ -9,6 +9,4 @@ spec:
     name: azure-provider-config  # This line points to your specific ProviderConfig
   forProvider:
     location: ${{ values.region }}
-  writeConnectionSecretToRef:
-    name: ${{ values.clusterName }}-azure-connection-secret
-    namespace: upbound-system
+
