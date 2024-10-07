@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - manifests/azure-provider.yaml
   - manifests/azure-provider-config.yaml
- # - manifests/provider-azure-network.yaml
- # - manifests/provider-azure-containerservice.yaml
+  - manifests/provider-azure-network.yaml
+  - manifests/provider-azure-containerservice.yaml

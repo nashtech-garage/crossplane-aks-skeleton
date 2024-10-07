@@ -4,6 +4,7 @@ metadata:
   name: vn-${{ values.clusterName }}
   annotations:
     argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/depends-on: ${{ values.resourceGroupName }}
 spec:
   providerConfigRef:
     name: azure-provider-config
