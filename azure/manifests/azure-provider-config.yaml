@@ -3,7 +3,6 @@ metadata:
   name: azure-provider-config
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-    argocd.argoproj.io/depends-on: provider-azure-management
 kind: ProviderConfig
 spec:
   credentials:
